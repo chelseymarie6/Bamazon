@@ -5,12 +5,12 @@ USE Bamazon;
 DROP TABLE IF EXISTS Products;
 
 CREATE TABLE Products (
-item_id INT(15) AUTO_INCREMENT NOT NULL,
+itemID INT(15) AUTO_INCREMENT NOT NULL,
 product_name VARCHAR(50),
 department_name VARCHAR(100),
 price DECIMAL(10,2) DEFAULT NULL,
 stock_quantity INT(10) DEFAULT NULL,
-PRIMARY KEY(item_id)
+PRIMARY KEY(itemID)
 );
 
 DROP TABLE Products;
