@@ -71,7 +71,7 @@ var startBuying = function() {
                 connection.query("UPDATE Products SET ? WHERE itemID = ?", [{stock_quantity: newQuantity}, itemID]);
                 startBuying();
             } else {
-                console.log("Unfortunately, there are not enough items in stock for you to purchase that many.");
+                console.log("Unfortunately, there are not enough items in stock for you to make that purchase.");
                 startBuying();
             }
         })
