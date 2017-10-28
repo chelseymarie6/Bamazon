@@ -11,7 +11,7 @@ It will ask you what you'd like to purchase by item number and how many.
 If there are enough items, then it will adjust the quantities and continue.
 If there are not enough of that item or you want too many, an error message will occur.
 
-![Screenshot](/customerjs.mp4)
+![Screenshot](/customerjs.png)
 
 
 Initializing node BamazonManager.js in the command line brings up three options for the manager:
