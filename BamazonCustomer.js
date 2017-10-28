@@ -16,7 +16,7 @@ var connection = mysql.createConnection({
 
 connection.connect(function(err){
     if(err) throw err;
-    console.log("Connected as " + connection.threadId);
+    //console.log("Connected as " + connection.threadId);
     startBuying();
     //endConnection();
 })
@@ -38,7 +38,7 @@ function printTable(res) {
 var startBuying = function() {
     connection.query("SELECT * FROM Products", function (err, res){
         
-        console.log("_____________Bamazon's Inventory_____________");
+        console.log("_____________Bamazon's Inventory_____________".italic);
 
         printTable(res);
         var productsArray = [];
@@ -57,10 +57,10 @@ var startBuying = function() {
             message: "How many would you like to purchase?"
 
         }]).then(function(answer){
-            console.log(answer);
+            //console.log(answer);
             
             var itemID = answer.item;
-            console.log(itemID);
+            //console.log(itemID);
 
             var chosenItem = res[itemID-1];
             console.log(chosenItem);
@@ -68,11 +68,17 @@ var startBuying = function() {
             var newQuantity = chosenItem.stock_quantity - answer.quantity;
 
             if (newQuantity >= 0) {
+                console.log("Bamazon's Inventory has enough of your desired item (".cyan + itemID + ")!".cyan);
+                console.log("Quantity in Stock: ".magenta + itemID + " Order Quantity: ".magenta + answer.quantity);
+                console.log("Updating inventory. Thank you for shopping at Bamazon!".yellow);
+                
                 connection.query("UPDATE Products SET ? WHERE itemID = ?", [{stock_quantity: newQuantity}, itemID]);
+                
                 startBuying();
             } else {
-                console.log("Unfortunately, there are not enough items in stock for you to make that purchase.");
-                startBuying();
+                console.log("_________Unfortunately, there are not enough items in stock for you to make that purchase._________");
+                endConnection();
+
             }
         })
     })
