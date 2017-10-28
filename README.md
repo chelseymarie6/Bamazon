@@ -7,7 +7,7 @@ The application will take in orders from customers and deplete from the store's 
 
 Initializing node BamazonCustomer.js in the command line brings up the storefront:
 
-![Screenshot](/BamazonPNG/customerjs - buyproduct.PNG)
+![Screenshot](/customerjs - buyproduct.PNG)
 
 It will ask you what you'd like to purchase by item number and how many.
 If there are enough items, then it will adjust the quantities and continue.
