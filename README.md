@@ -5,7 +5,7 @@
 The application will take in orders from customers and deplete from the store's total supplies.
 
 
-#####Initializing node BamazonCustomer.js in the command line brings up the storefront:
+##### Initializing node BamazonCustomer.js in the command line brings up the storefront:
 
 ![Screenshot](/BamazonPNG/customerjs_buyproduct.PNG)
 
@@ -18,10 +18,10 @@ If there are not enough of that item or you want too many, an error message will
 
 ![Screenshot](/BamazonPNG/customerjs_notenough.PNG)
 
-#####Initializing node BamazonManager.js in the command line brings up three options for the manager:
-    *View products on sale
-    *View low inventory
-    *Add inventory
+##### Initializing node BamazonManager.js in the command line brings up three options for the manager:
+    * View products on sale
+    * View low inventory
+    * Add inventory
 
 ![Screenshot](/BamazonPNG/managerjs_choices.PNG)
 
