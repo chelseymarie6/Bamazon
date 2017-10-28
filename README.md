@@ -7,23 +7,35 @@ The application will take in orders from customers and deplete from the store's 
 
 Initializing node BamazonCustomer.js in the command line brings up the storefront:
 
+![Screenshot](/BamazonPNG/customerjs - buyproduct.png)
+
 It will ask you what you'd like to purchase by item number and how many.
 If there are enough items, then it will adjust the quantities and continue.
+
+![Screenshot](/BamazonPNG/customerjs - boughtproduct.png)
+
 If there are not enough of that item or you want too many, an error message will occur.
 
-![Screenshot](/customerjs.png)
-
+![Screenshot](/BamazonPNG/customerjs - notenough.png)
 
 Initializing node BamazonManager.js in the command line brings up three options for the manager:
     View products on sale
     View low inventory
     Add inventory
 
+![Screenshot](/BamazonPNG/managerjs - choices.png)
+
 When the manager selects view products on sale it will show the current inventory in a table.
+
+![Screenshot](/BamazonPNG/managerjs - viewproducts.png)
+
 When the manager views low inventory, it will only show items with a stock quantity of less than 3.
+
+![Screenshot](/BamazonPNG/managerjs - lowinventory.png)
+
 When the manager adds inventory, they simply select the item ID they want to add to, and input the increased quantity.
 
-![Screenshot](managerjs.mp4)
+![Screenshot](/BamazonPNG/managerjs - addinventory.png)
 
 
 This also features fun npm packages to make unicode tables and text with colors:
